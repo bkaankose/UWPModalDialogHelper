@@ -1,0 +1,29 @@
+﻿<Application
+    x:Class="ModalDialogHelper.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ModalDialogHelper"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <Style TargetType="local:ModalDialogContainer">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:ModalDialogContainer">
+                        <Grid>
+                            <Grid Background="Black" Opacity="0.8"/>
+                            <ContentPresenter x:Name="ContentPresenter" Margin="16">
+                                <ContentPresenter.Transitions>
+                                    <TransitionCollection>
+                                        <EntranceThemeTransition />
+                                    </TransitionCollection>
+                                </ContentPresenter.Transitions>
+                            </ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+    
+</Application>
